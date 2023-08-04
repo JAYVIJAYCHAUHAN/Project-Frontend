@@ -1,0 +1,32 @@
+ /* ReceiveTable.css */
+.receive-table {
+  margin-bottom: 100px;  
+  margin-right: auto;
+  width: 19%;
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+}
+
+.receive-table th,
+.receive-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  background-color: #f2f2f2;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .receive-table {
+    font-size: 14px; /* Reduce font size for smaller screens */
+  }
+
+  .receive-table th,
+  .receive-table td {
+    padding: 6px; /* Reduce padding for smaller screens */
+  }
+    
+}
+.mongo{
+     text-align: center;
+      
+ }

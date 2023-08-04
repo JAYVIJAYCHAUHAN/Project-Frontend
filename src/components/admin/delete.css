@@ -1,0 +1,55 @@
+ /* DeleteData.css */
+.delete-data-container {
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.delete-data-container h1 {
+  margin-bottom: 10px;
+}
+
+.delete-data-container p {
+  margin: 10px 0;
+  color: #ff0000; /* Error message color */
+}
+
+.delete-data-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.delete-data-container label {
+  font-weight: bold;
+}
+
+.delete-data-container input {
+  width: 100%;
+  max-width: 300px;
+  margin: 5px 0;
+  padding: 5px;
+}
+
+.delete-data-container button {
+  width: 100%;
+  max-width: 150px;
+  padding: 8px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .delete-data-container input,
+  .delete-data-container button {
+    max-width: 100%; /* Adjust input and button width for smaller screens */
+  }
+}
+

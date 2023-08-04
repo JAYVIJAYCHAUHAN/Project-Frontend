@@ -1,0 +1,74 @@
+  .admin-card {
+    
+    margin: 10%;
+    box-shadow: 0 10px 2px rgb(0 0 0/20%);
+    padding: 10%;
+    border-radius: 20px;
+  }
+.input-admin {
+  width: 100%;  
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #eee;
+}
+
+.add-btn {
+   width: 100px; 
+   margin-top: 10px;
+   margin-left: 350px;
+   ;
+  cursor: pointer;
+  padding: 10px;
+  background-color: blue;
+  color: #eee;
+  border: none;
+  border-radius: 7px;
+}
+/* .admin-add1
+{
+  background-color: blue;
+  text-decoration: none;
+
+} */
+.admin-add{
+ 
+   margin:auto;
+    padding: auto;
+  text-decoration: none;
+     cursor: pointer;
+  padding: 5px;
+  background-color: blue;
+  color: #eee;
+  border: none;
+  border-radius: 7px;
+}
+  
+ /* ReceiveTable.css */
+.receive-table1 {
+   margin:auto;
+   padding: auto;
+  width: 19%;
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+}
+
+.receive-table1 th,
+.receive-table1 td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  background-color: #f2f2f2;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .receive-table1 {
+    font-size: 14px; /* Reduce font size for smaller screens */
+  }
+
+  .receive-table1 th,
+  .receive-table1 td {
+    padding: 6px; /* Reduce padding for smaller screens */
+  }
+    
+}
+  

@@ -1,0 +1,57 @@
+
+
+  .admin-card{
+      
+    text-align: center;
+     flex-direction: column;
+     display: flex;
+    box-shadow:  0 1px 2px rgb(0 0 0/20%);
+    margin:  5%;
+    padding: 5%;
+  }
+  .input-admin{
+     
+     text-align: center;
+        height: 30px;
+    width: 30%;
+     border-radius: 5px;
+     border: 1px solid #BEBEBE;
+     margin-bottom: 10px;
+      margin-left: 350px;
+     padding: 8px 8px;
+     cursor: pointer;
+  }
+  .select-admin{
+      
+     text-align: center;
+    width: 31.5%;
+    padding: 7px 20px  ;
+    
+    margin: 5px;
+    border: 1px solid #BEBEBE;
+    border-radius: 5px;
+    margin-right: 13px;
+     margin-left: 350px;
+    cursor: pointer;
+    background-color: #eeee;
+  }
+  .submit{
+       margin-left: 500px;
+     width: 100px;
+     cursor: pointer;
+     padding: 10px;
+     background-color: blue;
+     color:#eee;
+     border: none;
+     border-radius: 7px;
+  }
+   .choose{
+      margin-left: 350px;
+   }
+   .admin-login{
+          margin-right: 100px;
+    margin-left: 1px;
+   }
+   .add-admin{
+      margin-right: 70px;
+   }

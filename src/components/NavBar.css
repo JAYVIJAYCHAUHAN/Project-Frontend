@@ -1,0 +1,101 @@
+.flex{
+    display: flex;
+    
+}
+
+   .justify-content-space-between{
+    justify-content: space-between;
+     
+   }
+
+   .bg-navbar{
+    width: 100%;
+    background-color:	#800000;
+    font-size: large;
+    color: white;
+   }
+
+   .p-10{
+    padding: 10px;
+   }
+   .ptb-20{
+    padding: 19px;
+    padding-bottom: 30px;
+   }
+
+   .pl-5{
+      
+    padding-left: 60px;
+     
+   }
+
+   .nav-links{
+      cursor:pointer;
+    
+       
+   }
+   .nav-links:hover{
+     color: white
+   }
+   .links{
+    padding-left: 22px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    
+   }
+   .links:hover{
+    color: pink;
+   }
+   .pl-10 {
+    
+    padding-left: 80px;
+    padding-right: 40px;
+    text-decoration: none;
+    
+}
+/* .link{
+    text-decoration: none;
+   color: white;
+   
+} */
+
+.login{
+    /* margin: 5px;
+    margin-left:10px;
+    text-align: center;
+    cursor: pointer; */
+     /* background-color: hwb(198 13% 20%);
+  color: white;  */
+  padding-top: 10px;
+  padding-bottom: 15px;
+   padding-right:20px;
+   padding-left: 20px;
+  margin-left: 70px;
+   margin-right: 80px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+     
+  
+    
+  cursor: pointer;
+  
+     
+}
+  .club{
+     color: white;
+     
+      
+  }
+  /* .logout{
+      /* padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 18px;
+    padding-left: 10px;
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+
+    */
+  /* }  */ 
