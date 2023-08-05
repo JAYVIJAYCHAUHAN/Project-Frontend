@@ -33,22 +33,20 @@ function ServicesAdmin() {
     formData.append("description", desc);
     formData.append("image", image);
     formData.append("place", place);
-    formData.append("SetDate",SetDate);
+    formData.append("SetDate", SetDate);
 
-    
     axios
-      .post("http://localhost:5000/api/services", formData, {
+      .post(" https://projectnith.onrender.com/api/services", formData, {
         headers: {
           Authorization: `${localStorage.getItem("token")}`,
         },
       })
-      
-       
+
       .then((res) => {
         console.log(res.data);
         if (res.data.code === 200) {
           window.alert(" Event Added Successfully");
-          window.location.reload(); 
+          window.location.reload();
         } else {
           // console.log("Error:", res.data.message);
           window.alert(" Event is not added, technical issues");
@@ -57,8 +55,7 @@ function ServicesAdmin() {
           localStorage.setItem("token", null);
         }
       })
-       
-        
+
       .catch((err) => {
         console.log(err, "err");
       });
@@ -93,7 +90,8 @@ function ServicesAdmin() {
 
       <br />
       <input
-     className="choose"    onChange={(e) => {
+        className="choose"
+        onChange={(e) => {
           // console.log(e.target.files[0]);
           setImage(e.target.files[0]);
         }}

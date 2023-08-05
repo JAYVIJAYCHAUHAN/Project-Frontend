@@ -1,22 +1,22 @@
 import "./servicesAdmin.css";
- 
+
 import { useEffect, useState } from "react";
 import axios from "axios";
-import {Link,useNavigate} from 'react-router-dom'
+import { Link, useNavigate } from "react-router-dom";
 import DeleteUser from "./deleteUser";
+
 function ListAdmin() {
-   const navigate =useNavigate()
+  const navigate = useNavigate();
   const [admins, setAdmins] = useState([]);
-  useEffect(() =>{
-    if(localStorage.getItem('type')==='Subadmin')
-      navigate('/admin/service')
-    if(localStorage.getItem('type') ==='Admin'){
-      navigate('/admin/list')
+  useEffect(() => {
+    if (localStorage.getItem("type") === "Subadmin") navigate("/admin/service");
+    if (localStorage.getItem("type") === "Admin") {
+      navigate("/admin/list");
     }
-  },[])
+  }, []);
   useEffect(() => {
     axios
-      .get("http://localhost:5000/admin/admins")
+      .get(" https://projectnith.onrender.com/admin/admins")
       .then((res) => {
         console.log(res.data);
         setAdmins(res.data.data);

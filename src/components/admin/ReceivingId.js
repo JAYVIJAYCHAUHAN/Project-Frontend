@@ -2,13 +2,14 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./ReceivingId.css";
+
 const Receive = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
     // Fetch data from the backend API
     axios
-      .get("http://localhost:5000/api/data")
+      .get(" https://projectnith.onrender.com/api/data")
       .then((response) => {
         setData(response.data);
       })

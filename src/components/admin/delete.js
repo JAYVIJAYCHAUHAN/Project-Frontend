@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
- import "./delete.css"
+import "./delete.css";
 import Receive from "./ReceivingId";
+
 const DeleteData = () => {
   // const [success, setSuccess] = useState("");
   // const [error, setError] = useState(null);
@@ -17,12 +18,12 @@ const DeleteData = () => {
 
     try {
       const response = await axios.delete(
-        `http://localhost:5000/api/data/${dataId}`
+        ` https://projectnith.onrender.com/api/data/${dataId}`
       );
 
       if (response.status === 200) {
         alert("Data deleted successfully");
-        window.location.reload(); 
+      //  window.location.reload();
         console.log("Data deleted successfully");
         // setError("");
         // setSuccess("Data deleted successfully");
@@ -30,7 +31,7 @@ const DeleteData = () => {
         // Optionally, update the UI or display a success message.
       } else {
         alert("Error deleting data. Please try again later.");
-        console.error("Error deleting data:", );
+        console.error("Error deleting data:");
         // setSuccess("");
         // setError("Error deleting data. Please try again later.");
         setResponseMsg("Error deleting data. Please try again later.");

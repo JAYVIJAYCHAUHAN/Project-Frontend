@@ -1,13 +1,14 @@
 import "./Services.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
+
 function Service() {
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState("");
   // local api call using axios
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/services")
+      .get(" https://projectnith.onrender.com/api/services")
       .then((res) => {
         console.log(res.data);
         setData(res.data.data);
@@ -39,12 +40,12 @@ function Service() {
                   <div key={serviceIndex + 1} className="card">
                     <img
                       width="100%"
-                      src={`http://localhost:5000/${serviceItem.imageUrl}`}
+                      src={` https://projectnith.onrender.com/${serviceItem.imageUrl}`}
                     />
 
                     <div className="title">{serviceItem?.title}</div>
                     <div className="des">{serviceItem?.description}</div>
-                     <h4 className="place">Place</h4>
+                    <h4 className="place">Place</h4>
 
                     <div className="setplace">{serviceItem?.place}</div>
                     <h4 className="date">Date</h4>

@@ -1,22 +1,22 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import {useNavigate} from "react-router-dom"
+import { useNavigate } from "react-router-dom";
 import "./adminCard.css";
 import { type } from "@testing-library/user-event/dist/type";
+
 function LoginAdmin() {
-    const navigete=useNavigate()
-     
+  const navigete = useNavigate();
+
   const [username, setUsername] = useState("");
-   
+
   const [password, setPassword] = useState("");
-    
+
   const handleClick = () => {
     console.log(username, password);
     axios
-      .post("http://localhost:5000/admin/login", {
+      .post(" https://projectnith.onrender.com/admin/login", {
         username: username,
         password: password,
-         
       })
       .then((res) => {
         console.log(res.data);
@@ -27,23 +27,26 @@ function LoginAdmin() {
           //   "You are Not allowed to login. Error: " + res.data.message
           // );
           // console.log("Error:", res.data.message);
-          window.alert("You are Not allowed to login. Error: " + res.data.message);
+          window.alert(
+            "You are Not allowed to login. Error: " + res.data.message
+          );
         }
-        localStorage.setItem('type',res.data.type)
-        localStorage.setItem('token',res.data.token)
-     if(localStorage.getItem('type')==='Subadmin'||localStorage.getItem('type')==='Admin') navigete('/admin/dashboard')
-          
-      
+        localStorage.setItem("type", res.data.type);
+        localStorage.setItem("token", res.data.token);
+        if (
+          localStorage.getItem("type") === "Subadmin" ||
+          localStorage.getItem("type") === "Admin"
+        )
+          navigete("/admin/dashboard");
       })
       .catch((err) => {
         console.log(err);
-        
       });
   };
   return (
     <div className="admin-card">
       <h1 className="admin-login"> Admin Login </h1>
-       
+
       <input
         value={username}
         onChange={(e) => setUsername(e.target.value)}

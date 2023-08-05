@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import "./adminCard.css";
+
 function AddAdmin() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -9,7 +10,7 @@ function AddAdmin() {
   const handleClick = () => {
     console.log(username, password, type, status);
     axios
-      .post("http://localhost:5000/admin/add", {
+      .post(" https://projectnith.onrender.com/admin/add", {
         username,
         password,
         status,
@@ -17,13 +18,12 @@ function AddAdmin() {
         // data: Date.now(),
       })
       .then((res) => {
-        if(res.data.code===500){
-          window.alert("Admin Added Successfully")
-          window.location.reload()
-        }
-        else{
+        if (res.data.code === 500) {
+          window.alert("Admin Added Successfully");
+          window.location.reload();
+        } else {
           // console.log("Error:", res.data.message);
-           window.alert("Admin not added. Error: " + res.data.message);
+          window.alert("Admin not added. Error: " + res.data.message);
         }
         console.log(res.data);
       })
@@ -33,7 +33,7 @@ function AddAdmin() {
   };
   return (
     <div className="admin-card">
-       <h1>Admin Dashboard</h1>
+      <h1>Admin Dashboard</h1>
       <h1 className="add-admin">Add Admin</h1>
       <input
         value={username}
